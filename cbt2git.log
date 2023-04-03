@@ -1,0 +1,79 @@
+2023-04-03 03:20:35.441704 - Initialized conversion of CBT874
+2023-04-03 03:20:36.232285 - Received CBT.V504.FILE874.PDS from FILE874.XMI 
+2023-04-03 03:20:36.235340 - Found $$$#DATE.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/$$$#DATE
+2023-04-03 03:20:36.236441 - Found $$INDEX.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/$$INDEX
+2023-04-03 03:20:36.294947 - Found $HEL.xmi (application/xmit) in CBT.V504.FILE874.PDS
+2023-04-03 03:20:36.319697   - Received RECFM=U data, stored XMIT file as CBT874/$HEL.xmi
+2023-04-03 03:20:36.320817 - Found @FILE874.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/@FILE874
+2023-04-03 03:20:36.322446 - Found ABEND.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/ABEND
+2023-04-03 03:20:36.323580 - Found ADDTO.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/ADDTO
+2023-04-03 03:20:36.324811 - Found ADIS.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/ADIS
+2023-04-03 03:20:36.326050 - Found APFLIST.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/APFLIST
+2023-04-03 03:20:36.327216 - Found BLKDISK.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/BLKDISK
+2023-04-03 03:20:36.328416 - Found BLKSPTRK.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/BLKSPTRK
+2023-04-03 03:20:36.329515 - Found BURN.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/BURN
+2023-04-03 03:20:36.330620 - Found CATL.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/CATL
+2023-04-03 03:20:36.331761 - Found CCAT.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/CCAT
+2023-04-03 03:20:36.332819 - Found CDSCB.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/CDSCB
+2023-04-03 03:20:36.333879 - Found CINMX.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/CINMX
+2023-04-03 03:20:36.334986 - Found CNCLPG.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/CNCLPG
+2023-04-03 03:20:36.336188 - Found COPYFILE.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/COPYFILE
+2023-04-03 03:20:36.337211 - Found COPYMODS.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/COPYMODS
+2023-04-03 03:20:36.338202 - Found CPSCB.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/CPSCB
+2023-04-03 03:20:36.339704 - Found DSAT.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/DSAT
+2023-04-03 03:20:36.340754 - Found DSMF.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/DSMF
+2023-04-03 03:20:36.341709 - Found DSPACE.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/DSPACE
+2023-04-03 03:20:36.342671 - Found DTEST.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/DTEST
+2023-04-03 03:20:36.343963 - Found DVAT.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/DVAT
+2023-04-03 03:20:36.345005 - Found DVOL.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/DVOL
+2023-04-03 03:20:36.346048 - Found EESCB.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/EESCB
+2023-04-03 03:20:36.346064 - Found FSH.bin containing application/octet-stream, moved to PDS/FSH
+2023-04-03 03:20:36.348824 - Found FSHELP.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/FSHELP
+2023-04-03 03:20:36.348859 - Found HEL.bin containing application/octet-stream, moved to PDS/HEL
+2023-04-03 03:20:36.351253 - Found ICH.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/ICH
+2023-04-03 03:20:36.352543 - Found IEBANTP.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/IEBANTP
+2023-04-03 03:20:36.354024 - Found IKJEEPTR.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/IKJEEPTR
+2023-04-03 03:20:36.355409 - Found INMXD.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/INMXD
+2023-04-03 03:20:36.356519 - Found JCLSET.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/JCLSET
+2023-04-03 03:20:36.357444 - Found KMBAPFLB.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/KMBAPFLB
+2023-04-03 03:20:36.358392 - Found KONCAT.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/KONCAT
+2023-04-03 03:20:36.359434 - Found LDS.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/LDS
+2023-04-03 03:20:36.360757 - Found LOADTEST.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/LOADTEST
+2023-04-03 03:20:36.361864 - Found LOCATE.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/LOCATE
+2023-04-03 03:20:36.362996 - Found LOGOPTS.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/LOGOPTS
+2023-04-03 03:20:36.364269 - Found LPSCB.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/LPSCB
+2023-04-03 03:20:36.365328 - Found LWATMGR.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/LWATMGR
+2023-04-03 03:20:36.366683 - Found PDS86.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/PDS86
+2023-04-03 03:20:36.367693 - Found PGLITE.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/PGLITE
+2023-04-03 03:20:36.368688 - Found RELEASE.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/RELEASE
+2023-04-03 03:20:36.368702 - Found REV.bin containing application/octet-stream, moved to PDS/REV
+2023-04-03 03:20:36.369724 - Found REVED.bin containing application/octet-stream, moved to PDS/REVED
+2023-04-03 03:20:36.371839 - Found REVEDIT.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/REVEDIT
+2023-04-03 03:20:36.372821 - Found REVIEW.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/REVIEW
+2023-04-03 03:20:36.373965 - Found REVLEV.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/REVLEV
+2023-04-03 03:20:36.374977 - Found REVOUT.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/REVOUT
+2023-04-03 03:20:36.376102 - Found REVPDS.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/REVPDS
+2023-04-03 03:20:36.377093 - Found REVPDSE.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/REVPDSE
+2023-04-03 03:20:36.378154 - Found REVTSO.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/REVTSO
+2023-04-03 03:20:36.379244 - Found REVUNIX.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/REVUNIX
+2023-04-03 03:20:36.379257 - Found REVVSAM.bin containing application/octet-stream, moved to PDS/REVVSAM
+2023-04-03 03:20:36.382081 - Found RFE.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/RFE
+2023-04-03 03:20:36.383296 - Found RGENR.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/RGENR
+2023-04-03 03:20:36.384348 - Found RPFHELP.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/RPFHELP
+2023-04-03 03:20:36.385410 - Found RXJCL.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/RXJCL
+2023-04-03 03:20:36.386499 - Found SHOWTCAS.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/SHOWTCAS
+2023-04-03 03:20:36.387816 - Found SHOWTPVT.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/SHOWTPVT
+2023-04-03 03:20:36.388806 - Found STEPLIB.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/STEPLIB
+2023-04-03 03:20:36.390116 - Found TSUB.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/TSUB
+2023-04-03 03:20:36.391432 - Found TSUBQUIK.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/TSUBQUIK
+2023-04-03 03:20:36.392522 - Found TSUINFO.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/TSUINFO
+2023-04-03 03:20:36.393680 - Found TSVTTMO.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/TSVTTMO
+2023-04-03 03:20:36.394922 - Found UCBDASD.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/UCBDASD
+2023-04-03 03:20:36.396048 - Found UKEYCSA.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/UKEYCSA
+2023-04-03 03:20:36.397295 - Found ULUDASD.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/ULUDASD
+2023-04-03 03:20:36.398446 - Found ULUTAPE.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/ULUTAPE
+2023-04-03 03:20:36.399492 - Found USERINFO.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/USERINFO
+2023-04-03 03:20:36.400662 - Found VSAMANAL.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/VSAMANAL
+2023-04-03 03:20:36.402050 - Found WHEREIS.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/WHEREIS
+2023-04-03 03:20:36.403418 - Found WHOSGOT.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/WHOSGOT
+2023-04-03 03:20:36.404569 - Found XEQ.txt (text/plain) in CBT.V504.FILE874.PDS, moved to PDS/XEQ
