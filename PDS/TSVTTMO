@@ -1,0 +1,33 @@
+)F FUNCTION -
+
+  Display/Change the TSO LOGON screen timeout value.
+
+  The TSO command TSVTTMO will display the status of your
+  TSO LOGON screen timeout value, in minutes.  This is a
+  new command applicable to z/OS 2.4 and higher.
+
+  You can change this value, both in the TSVT (where it counts)
+  and the TPVT (where it shows), by entering a number after the
+  command name.  Entering 0, will call the LOGON screen to never
+  time out.
+
+  Example:   LOGON userid
+
+      This gets you a logon screen, and you have nnn minutes
+      to enter a password before the screen times out.
+      (Default is 5 minutes)
+
+)X SYNTAX  -
+
+       TSVTTMO  | nnn           (a decimal number - 0 thru 255)
+                | (no operand - just displays the current value)
+
+  DEFAULTS - NONE
+  ALIAS    - NONE
+
+
+)O OPERANDS -
+
+))nnn   -  Length of the timeout in minutes, or 0 to never
+           time out.
+

@@ -1,0 +1,38 @@
+LOOK COMMAND - DISPLAY VIRTUAL MEMORY      CURRENT ASID= 003F
+ENTER CMD -
+LAST CMD  -
+
+)F FUNCTION -
+LOOK is a real time core display and formatting
+program. It also has the capability of displaying
+memory in any address space.
+
+)X SYNTAX  -
+       LOOK   (no operands)
+
+  LOOK has subcommands, once you are in it:
+
+Its valid subcommands are:
+
+  Iexp  24 bit indirect
+  Jexp  31 bit indirect
+  Gexp  64 bit indirect
+  (To change ASID, overtype it in hex.)
+  >     Forward
+  <     Backward
+  =sym  Define current address as "sym"
+  ,sym  Redisplay core at "sym"
+  Lname Indirect thru control block field
+  R     Refresh displayed storage
+  M0/M1 Flip between top and center
+  Ocb   Format as "cb" control block
+        "cb" may be NULL to show as hex
+
+  where 'exp' is of the form:
+      <+/->hhhh<+/-hhhh<+/-hhhh...>>
+  and 'hhhh' is a 1 to 8 digit hex number.
+
+
+
+1= HELP      2=           3= END        4=           5= REPEAT  6=
+7= BACKWARD  8= FORWARD   9= HIST BWD  10= HIST FWD 11=        12=
