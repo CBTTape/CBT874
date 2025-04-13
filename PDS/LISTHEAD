@@ -1,0 +1,120 @@
+         HELP MEMBER FOR LISTHEAD TSO COMMAND PROCESSOR
+         ---- ------ --- -------- --- ------- ---------
+
+)F FUNCTION -
+
+    The LISTHEAD TSO command was written by Jeff Broido, with the
+    purpose of finding out whether modules from the system, have
+    standard headers.  In the "old days", before the greatly
+    extended instruction set for z/OS, there were just a few
+    standard ways for starting a module, and displaying a header
+    for it, which would tell you which version of the module you
+    have.  Now, there are a lot more ways of starting a module,
+    and IBM has taken advantage of them.  Therefore, there are a
+    lot more ways to create "IBM standard headers".
+
+    Jeff's original program is kept here as member LISTHE01.
+
+    LISTHEAD operates by doing a LOAD macro instruction, to attempt
+    to load a module into your private storage.  Then it looks at
+    the beginning of the module to determine if there is a standard
+    header for it, in some standard IBM format.  The way Jeff wrote
+    this program, if the header was not standard, the program would
+    not display it.  I wanted to generalize the program so that all
+    normal header information, "IBM standard" or not, would be
+    displayed.
+
+    So I added a display (which can be obtained using the optional
+    HEX keyword in LISTHEAD) to show the first 400 bytes from the
+    beginning of the module's storage, in any case, so you can see
+    what's there.  If the format of the eyecatcher at the beginning
+    is "somewhat standard", in other words, the program branches
+    past it, and goes on to execute "real instructions", then I
+    attempt to display the stuff that has been branched around,
+    considering it as "header information".
+
+    New instructions that can be used to start a module are BRC
+    (Branch Relative on Condition - unconditional JUMP), and LARL
+    (Load Address Relative Long).  IBM uses these to start a module
+    VERY OFTEN nowadays.  So these are now looked for, by LISTHEAD.
+    Also, BAS (Branch and Save) sometimes also occurs at the
+    beginning of a module.
+
+)X SYNTAX  -
+
+    LISTHEAD modname  (operands)
+
+)O OPERANDS -
+
+    none (default)  -  NOHEX, TITLE
+
+    ENTRY   -  Loads the module starting from the entry point
+
+    HEX     -  Displays the first 400 bytes of the module in hex
+
+    NOHEX   -  Does not "hex display" the first 400 bytes at the
+               beginning of the module.
+
+    NOTITLE -  Does not display the title line saying which module
+               was loaded.
+
+    TITLE   -  Displays the title line and much extra information
+
+
+Notes:
+
+  Here is some sample output from this program.  The program now
+   filters out most unprintable characters.
+
+Sample Outputs:                         (extend to 100 bytes out)
+
+LISTHEAD IKJEFT02 HEX
+Loaded Program Name:  IKJEFT02            (Load Point)
+-----------------------------------------------------------------
+Length  of loaded module:   0000AB60     Load point:  05893000
+Entry Point Displacement:   00000000    Entry point:  05893000
+Use keywords: HEX, NOHEX, TITLE, NOTITLE, ENTRY.
+Defaults are: NOHEX, TITLE.
+Use HEX to display the first 400 bytes,
+especially if the header is non-standard.
+First 400 bytes of Loaded Storage (load module e.p. + 400 bytes):
+-----------------------------------------------------------------
+ 00  k IKJEFT02:TMP MAINLINE CONTROL PROGRAM 19308 135920 HTE77D0  00     }  -
+4FF4093CDDCCEFF7EDD4DCCDDCDC4CDDEDDD4DDDCDCD4FFFFF4FFFFFF4CECFFCF04FF0069ED00647
+700802A92156302A347041953955036539630796791401930801359200835774007006080C0C5010
+0----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----
+     0-     i0    -      A&}{ &{} q1}   ¢00    &          {        0-- \>  \   \
+B5004F6200108F00BF6111071C5DC05CD09FD11D4FF00F55B543001544C01413044F664E6C5E025E
+6670700200209008FD0EB1A8810004000881008CA0047F8065100CB31000A3B3E2700050EC802480
+0----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----
+j    \-o \S   \     o    0-  a    m"   \   \\% \\ &\           \ w 0/- \   0/  \
+98374E695EE658E3B001988A4F6A18B001978A5E025EE65EE15E855282B0204E6A4F664E654F654E
+10007006802880002A00600A7000812A004F0A8024800C8004000880002A005026701050
+0----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----
+- j     -  \       \ 5 0/  \       \ 5j  &  /  \¦  \,K     \ 5 0/    A \ 5j  &
+6E9085476E4E6F51BB4EBF4F644E6A51BB4EBF918547614E624E6D51BB4EBF4F6451BC4EBF908547
+0C1401700C507E8035500570185080803950051E00701050A650B2803D50057010803150051E0070
+0----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----
+-----------------------------------------------------------------
+Load Module Header at Load Point:
+ k IKJEFT02:TMP MAINLINE CONTROL PROGRAM 19308 135920 HTE77D0 å00  Ç
+
+
+LISTHEAD IKJEFT02
+
+Loaded Program Name:  IKJEFT02            (Load Point)
+Length  of loaded module:   0000AB60     Load point:  05893000
+Entry Point Displacement:   00000000    Entry point:  05893000
+Use keywords: HEX, NOHEX, TITLE, NOTITLE, ENTRY.
+Defaults are: NOHEX, TITLE.
+Use HEX to display the first 400 bytes,
+especially if the header is non-standard.
+-----------------------------------------------------------------
+Load Module Header at Load Point:
+ k IKJEFT02:TMP MAINLINE CONTROL PROGRAM 19308 135920 HTE77D0 å00  Ç
+
+
+LISTHEAD IKJEFT02 NOHEX NOTITLE
+
+ k IKJEFT02:TMP MAINLINE CONTROL PROGRAM 19308 135920 HTE77D0 å00  Ç
+

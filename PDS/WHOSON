@@ -1,0 +1,17 @@
+)F Function
+  The WHOSON command is used to display a list of all the active TSO
+  users, ssh users, and zOSMF users (who may be Zowe users).
+
+  This is accomplished by using the SDSF REXX interface and then to
+  make it easier to review the report when under ISPF the code uses
+  the STEMEDIT command.
+
+  Note: zOSMF users appear in the SDSF DA report as TSO users as they
+        appear as TSO address spaces. These users may be true zOSMF
+        users who are using some service that requires TSO, or they
+        may be Zowe Explorer users.
+
+)X Syntax
+   WHOSON
+)O Operands
+   None

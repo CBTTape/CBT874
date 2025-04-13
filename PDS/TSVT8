@@ -1,0 +1,47 @@
+)F FUNCTION -
+
+  Display/Change the 8-character TSO userid support status of
+  your z/OS system.  (Valid for z/OS 2.3 and higher)
+
+  Status:  TSO command - APF authorized.
+
+  The TSO command TSVT8 checks or throws the switch which
+  turns ON/OFF TSO 8-character userid support.
+
+  The switch is located in the TSVT (TSO Vector Table) control
+  block at location X'06'.  If 8-character userid is on, then
+  the value of the switch is X'08'.  If off, the value is X'07'.
+  The value for a z/OS system previous to 2.2 is x'00'.
+
+
+  You can change this value, both in the TSVT (where it counts)
+  and the TPVT (where it shows), by entering a number after the
+  command name.  Entering 8 will turn on 8-character id support
+  and entering 7 will turn off 8-character userid support.
+
+)X SYNTAX  -
+
+       TSVT8    | 8             turns 8-character support ON
+                | 7             turns 8-character support OFF
+                | 0             regresses the value to pre-2.3
+                | (no operand)  just displays the current value)
+
+  DEFAULTS - NONE
+  ALIAS    - NONE
+
+
+)O OPERANDS -
+
+))8        Turns 8-character userid support on, both in the
+           TSVT (where it counts) and in the TPVT, where it
+           is just a copy, to indicate current status of the
+           switch.
+
+))7        Turns 8-character userid support off, both in the
+           TSVT (where it counts) and in the TPVT, where it
+           is just a copy, to indicate current status of the
+           switch.
+
+))0        Sets the 8-character switch back to the pre-2.3
+           value.
+

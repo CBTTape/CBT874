@@ -1,0 +1,61 @@
+ ---------------------------------------------------------------------
+                     D E L I N U S E
+ ---------------------------------------------------------------------
+
+  THIS IS A BATCH PROGRAM.  SAMPLE JCL IS BELOW.
+
+  FUNCTION     :  A PGM TO DELETE DATASETS THAT ARE IN USE ELSEWHERE
+                  (I.E. AN ENQ FOR SYSDSN DSNAME EXISTS)
+
+  PARM FIELD   :  NO PARMS
+                             DELETE DATASETS NAMED IN THE CARDS FILE
+                  IF THE VOLUME THEY RESIDE ON IS NOT IN USE. THIS IS
+                  SAFE, IF THE VOLUME IS NOT IN USE THEN THIS COPY
+                  OF THE DATASET CANNOT BE THE ACTIVE ONE.
+
+               :  PARM=FORCE
+                             DELETE DATASETS NAMED IN THE CARDS FILE
+                  EVEN IF THE VOLUME IS IN USE BY OTHERS.
+
+  EXECUTION JCL:
+
+   //      EXEC PGM=DELINUSE,PARM=FORCE
+   //SYSPRINT DD SYSOUT=*                             REQUIRED BY DSF
+   //SYSIN    DD UNIT=SYSDA,SPACE=(TRK,1)             REQUIRED BY DSF
+   //VTOC     DD UNIT=3380,VOL=SER=VOLSER,DISP=SHR    THIS VOLUME
+   //REPORT   DD SYSOUT=*                             REPORT FILE
+   //CARDS    DD *                                DATASETS TO SCRATCH
+   SYS1.HELP
+   SYS1.MACLIB
+   /*
+
+  RETURN CODES :  ALL RETURN CODES OTHER THAN ZERO WILL JE
+                  ACCOMPANIED BY A MESSAGE WRITTEN THE REPORT FILE.
+
+  ABENDS       :  U0001  RDJFCB OF VTOC DDNAME HAS FAILED
+                         R15 CONTAINS RETURN CODE FROM RDJFCBN.
+
+                  U0002  OPEN OF VTOC DCB HAS FAILED
+                         R15 CONTAINS RETURN CODE FROM OPEN.
+
+                  U0003  UNEXPECTED RETURN CODE FROM CVAFTST.
+                         R15 CONTAINS RETURN CODE FROM CVAFTST.
+
+                  U0004  NON ZERO RETURN CODE FROM SCRATCH MACRO.
+                         R15 CONTAINS RETURN CODE FROM SCRATCH.
+                         R2  CONTAINS STATUS CODE FROM SCRATCH.
+                         R3  CONTAINS ADDRESS OF DSN INVOLVED.
+
+                  U0005  ERROR DISABLING VTOC INDEX.
+                         SEE OUTPUT FROM DSF
+
+                  U0006  ERROR ENABLING VTOC INDEX.
+                         SEE OUTPUT FROM DSF
+
+                  U0007  VOLUME IN USE BY SOMEONE ELSE. USE THE FORCE
+                         PARM IF YOU STILL WANT TO DO IT.
+
+                  U0999  INTERNAL ERROR. THE DSNFLAG FIELD FOR A
+                         DATASET HAS A COMBINATION OF BITS SET THAT
+                         SHOULD NOT OCCUR. A LOGIC ERROR?
+ ---------------------------------------------------------------------

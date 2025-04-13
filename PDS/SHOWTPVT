@@ -1,0 +1,23 @@
+)F FUNCTION -
+
+  The TSO command SHOWTPVT will display the status of your
+  TSO PARMLIB VECTOR TABLE, which reflects all of the settings
+  in the IKJTSOxx member of PARMLIB.
+
+
+)X SYNTAX  -
+
+       SHOWTPVT
+
+
+  DEFAULTS - NONE
+  ALIAS    - NONE
+
+
+
+
+)O OPERANDS -
+
+   None
+
+
